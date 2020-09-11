@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +20,44 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright © 2017 Bucquet. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="7mf-5d-eOU">
+                                <rect key="frame" x="5" y="631.5" width="365" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GolfTrack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75Y-HQ-iaD">
+                                <rect key="frame" x="114" y="272.5" width="148" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-07-30 at 11.28.56 AM" translatesAutoresizingMaskIntoConstraints="NO" id="7bJ-lK-Jj3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="75Y-HQ-iaD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4va-Ja-SIi"/>
+                            <constraint firstItem="7mf-5d-eOU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="5" id="9QS-Wy-X34"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="7bJ-lK-Jj3" secondAttribute="bottom" id="AiM-iD-Klf"/>
+                            <constraint firstItem="75Y-HQ-iaD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-40" id="FK9-4C-cts"/>
+                            <constraint firstItem="7bJ-lK-Jj3" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="HdQ-pu-HPb"/>
+                            <constraint firstAttribute="trailing" secondItem="7mf-5d-eOU" secondAttribute="trailing" constant="5" id="JSe-WY-Zsp"/>
+                            <constraint firstItem="7bJ-lK-Jj3" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Mmk-iz-YCH"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="7mf-5d-eOU" secondAttribute="bottom" constant="15" id="i9U-vh-597"/>
+                            <constraint firstAttribute="trailing" secondItem="7bJ-lK-Jj3" secondAttribute="trailing" id="mu1-iN-LhX"/>
+                            <constraint firstItem="7mf-5d-eOU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="uQu-au-Eld"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Screen Shot 2017-07-30 at 11.28.56 AM" width="483" height="645"/>
+    </resources>
 </document>

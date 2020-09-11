@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M2K-Je-EBC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--GolfTrack-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GolfTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,178 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fy1-Tz-aWp">
+                                <rect key="frame" x="169" y="617" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ucm-sU-Dfj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click here to take  a picture of the flag" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b9-gh-ThD">
+                                <rect key="frame" x="76" y="101" width="149" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="without zooming" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbf-zO-cbL">
+                                <rect key="frame" x="76" y="141" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-08-01 at 3.33.03 PM" translatesAutoresizingMaskIntoConstraints="NO" id="hSG-bD-8iu">
+                                <rect key="frame" x="17" y="79" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="u2M-EP-ayQ"/>
+                                    <constraint firstAttribute="height" constant="55" id="yTY-Jl-Mr9"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELf-Xu-UXh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5b9-gh-ThD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="3KJ-bM-JQ8"/>
+                            <constraint firstItem="Fy1-Tz-aWp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6zq-iQ-tKY"/>
+                            <constraint firstItem="ELf-Xu-UXh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="B46-Z5-lT7"/>
+                            <constraint firstItem="vbf-zO-cbL" firstAttribute="trailing" secondItem="5b9-gh-ThD" secondAttribute="trailing" id="B6R-0p-CjV"/>
+                            <constraint firstItem="ELf-Xu-UXh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NW2-D8-P6X"/>
+                            <constraint firstItem="vbf-zO-cbL" firstAttribute="centerX" secondItem="5b9-gh-ThD" secondAttribute="centerX" id="ZfX-0g-Eij"/>
+                            <constraint firstItem="hSG-bD-8iu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="ave-DO-Fhh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fy1-Tz-aWp" secondAttribute="bottom" constant="20" id="bWJ-qX-62q"/>
+                            <constraint firstItem="ELf-Xu-UXh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gaY-fv-uwX"/>
+                            <constraint firstItem="hSG-bD-8iu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="iff-Pe-BIj"/>
+                            <constraint firstItem="ELf-Xu-UXh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="nMh-rt-HUy"/>
+                            <constraint firstItem="vbf-zO-cbL" firstAttribute="leading" secondItem="5b9-gh-ThD" secondAttribute="leading" id="oc0-5M-R9g"/>
+                            <constraint firstItem="vbf-zO-cbL" firstAttribute="top" secondItem="5b9-gh-ThD" secondAttribute="bottom" constant="-1" id="ueo-L7-70R"/>
+                            <constraint firstItem="5b9-gh-ThD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="yap-9m-CC3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="GolfTrack" id="sgQ-S4-95U">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="Pbx-FE-bIy">
+                            <connections>
+                                <action selector="camerabtn:" destination="BYZ-38-t0r" id="dbm-Lm-HZL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="LdF-Ar-2bb">
+                            <connections>
+                                <action selector="DONEbtn:" destination="BYZ-38-t0r" id="qPg-wg-nQh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageImg" destination="hSG-bD-8iu" id="o8w-tW-bbi"/>
+                        <outlet property="imageLbl" destination="5b9-gh-ThD" id="w9W-rd-MSO"/>
+                        <outlet property="imageLbl2" destination="vbf-zO-cbL" id="1fU-hD-tYg"/>
+                        <outlet property="scroll_view" destination="ELf-Xu-UXh" id="5sL-3L-2db"/>
+                        <segue destination="N2e-Ue-iDT" kind="show" identifier="DONE" id="03H-F7-LEa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1050.4000000000001" y="-255.02248875562222"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="y3Y-7U-H9r">
+            <objects>
+                <viewController id="N2e-Ue-iDT" customClass="View2" customModule="GolfTrack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="am0-nJ-eA0"/>
+                        <viewControllerLayoutGuide type="bottom" id="eoN-Hx-SKn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="30S-Ja-PnI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dist.png" translatesAutoresizingMaskIntoConstraints="NO" id="ciq-fE-fY4">
+                                <rect key="frame" x="138" y="464" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="MIL-jX-uqZ"/>
+                                    <constraint firstAttribute="width" constant="100" id="MzC-SK-w1u"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrQ-AV-S8G">
+                                <rect key="frame" x="26" y="332.5" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45N-5t-56l">
+                                <rect key="frame" x="153.5" y="226" width="69.5" height="56.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gfx-6H-Gh8">
+                                <rect key="frame" x="131" y="614" width="113" height="29"/>
+                                <segments>
+                                    <segment title="yards"/>
+                                    <segment title="meters"/>
+                                </segments>
+                                <connections>
+                                    <action selector="ValueChanged:" destination="N2e-Ue-iDT" eventType="valueChanged" id="rRd-Ba-PKF"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfl-Hk-OdZ">
+                                <rect key="frame" x="307" y="332.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PlX-V8-q8a">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gfx-6H-Gh8" firstAttribute="top" secondItem="ciq-fE-fY4" secondAttribute="bottom" constant="50" id="3yF-0T-vaV"/>
+                            <constraint firstItem="eoN-Hx-SKn" firstAttribute="top" secondItem="Gfx-6H-Gh8" secondAttribute="bottom" constant="25" id="Btc-u5-JKK"/>
+                            <constraint firstItem="45N-5t-56l" firstAttribute="centerX" secondItem="30S-Ja-PnI" secondAttribute="centerX" id="CXJ-6o-vF7"/>
+                            <constraint firstItem="Gfx-6H-Gh8" firstAttribute="centerX" secondItem="30S-Ja-PnI" secondAttribute="centerX" id="Clr-n0-9mr"/>
+                            <constraint firstItem="wfl-Hk-OdZ" firstAttribute="centerY" secondItem="mrQ-AV-S8G" secondAttribute="centerY" id="FiO-ad-ZPb"/>
+                            <constraint firstItem="wfl-Hk-OdZ" firstAttribute="top" secondItem="45N-5t-56l" secondAttribute="bottom" constant="50" id="J0H-oF-knr"/>
+                            <constraint firstItem="45N-5t-56l" firstAttribute="centerY" secondItem="30S-Ja-PnI" secondAttribute="centerY" constant="-80" id="MAv-aA-Yd6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wfl-Hk-OdZ" secondAttribute="trailing" constant="10" id="bYf-Qj-wVY"/>
+                            <constraint firstItem="ciq-fE-fY4" firstAttribute="centerX" secondItem="30S-Ja-PnI" secondAttribute="centerX" id="rog-ez-i3i"/>
+                            <constraint firstItem="mrQ-AV-S8G" firstAttribute="leading" secondItem="30S-Ja-PnI" secondAttribute="leadingMargin" constant="10" id="y2d-h0-AhO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Results" id="yic-xw-s9r"/>
+                    <connections>
+                        <outlet property="Max" destination="wfl-Hk-OdZ" id="CZZ-n1-gKu"/>
+                        <outlet property="Min" destination="mrQ-AV-S8G" id="aGQ-lg-yya"/>
+                        <outlet property="distance" destination="45N-5t-56l" id="Fva-Ic-6bW"/>
+                        <outlet property="ymOutlet" destination="Gfx-6H-Gh8" id="5ne-Ze-FOn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wj4-P3-llf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-215.19999999999999" y="-255.02248875562222"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r6i-rR-sL6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M2K-Je-EBC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qQN-D4-XbB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CkH-tG-erW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tfc-PG-cCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2047.2" y="-255.02248875562222"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Screen Shot 2017-08-01 at 3.33.03 PM" width="100" height="100"/>
+        <image name="dist.png" width="674" height="643"/>
+    </resources>
 </document>
